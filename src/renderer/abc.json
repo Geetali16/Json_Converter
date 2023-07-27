@@ -32,7 +32,7 @@
 
         "type": "text",
 
-        "body": "Hi {{1}}! Welcome to SparkTG. I am FlexiBot."
+        "body": "Hi {{1}}! Welcome Here. I am Json Flow generator."
 
       },
 
@@ -286,7 +286,7 @@
 
             "type": "text",
 
-            "body": "Seller Name: Name\nSeller Category: Grocery\nPhone: +91-****\nEmail: abcd@gmail.com\nLocation: https://goo.gl/maps/m3D3Bhh5P5PYPgGTA "
+            "body": "Seller Name: Name\nSeller Category: Grocery\nPhone: +91-91******19\nEmail: abcd@gmail.com\nLocation: https://goo.gl/maps/m3D3Bhh5P5 "
 
           },
 
@@ -474,7 +474,7 @@
 
             "type": "text",
 
-            "body": "नाम : Name\nCategory: Grocery\nफोन : +91-***** \nईमेल : abcd@gmail.com\nलोकैशन : https://goo.gl/maps/m3D3Bhh5P5PYPgGTA "
+            "body": "नाम : Name\nCategory: Grocery\nफोन : +91-91*******19 \nईमेल : abcd@gmail.com\nलोकैशन : https://goo.gl/maps/m3D3Bhh5 "
 
           },
 
