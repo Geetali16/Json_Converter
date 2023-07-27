@@ -1,0 +1,498 @@
+{
+
+  "bot_details": {
+
+    "isLangSelection": true,
+
+    "start_phrase": [
+
+      "Hi",
+
+      "hello",
+
+      "hey"
+
+    ],
+
+    "close_phrase": [
+
+      "bye",
+
+      "thank",
+
+      "thank you"
+
+    ],
+
+    "action_start": {
+
+      "type": "text",
+
+      "text": {
+
+        "type": "text",
+
+        "body": "Hi {{1}}! Welcome to SparkTG. I am FlexiBot."
+
+      },
+
+      "mapping_body": [
+
+        {
+
+          "field": "name"
+
+        }
+
+      ],
+
+      "name": "action_start",
+
+      "next": "action_lang"
+
+    },
+
+    "action_lang": {
+
+      "type": "interactive",
+
+      "interactive": {
+
+        "body": {
+
+          "text": "Please select your preferred language."
+
+        },
+
+        "action" : {
+
+        "buttons" : [
+
+          {
+
+            "type" : "reply",
+
+            "reply" : {
+
+              "id" : "hi-IN",
+
+              "title" : "हिन्दी "
+
+            }
+
+          },
+
+          {
+
+            "type" : "reply",
+
+            "reply" : {
+
+              "id" : "en-IN",
+
+              "title" : "English"
+
+            }
+
+          }
+
+        ]
+
+      },
+
+      "type" : "button"
+
+      },
+
+      "name": "action_lang",
+
+      "next": "category"
+
+    },
+
+    "lang_bot": {
+
+      "en-IN": {
+
+        "category": {
+
+          "name": "category",
+
+          "type": "text",
+
+          "text": {
+
+            "type": "text",
+
+            "body": "Please select a category"
+
+          },
+
+          "prompt_type": "question",
+
+          "response_type": "number",
+
+          "responses": [
+
+            {
+
+              "value": "1",
+
+              "label": "Grocery",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "2",
+
+              "label": "Food and Beverage",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "3",
+
+              "label": "Home and Decor",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "4",
+
+              "label": "Fashion",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "5",
+
+              "label": "Beauty and Personal Care",
+
+              "next": "seller_list"
+
+            }
+
+          ],
+
+          "next":"seller_list"
+
+        },
+
+        "seller_list": {
+
+          "type": "text",
+
+          "text": {
+
+            "type": "text",
+
+            "body": "Please select a seller"
+
+          },
+
+          "responses": [
+
+            {
+
+              "value": "1",
+
+              "label": "Seller 1",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "2",
+
+              "label": "Seller 2",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "3",
+
+              "label": "Seller 3",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "4",
+
+              "label": "Seller 4",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "5",
+
+              "label": "Seller 5",
+
+              "next": "seller_info"
+
+            }
+
+          ],
+
+          "prompt_type": "question",
+
+          "response_type": "number",
+
+          "index":"1_seller",
+
+          "fields":["id","name"],
+
+          "responses_show":["name"],
+
+          "filters":["category"],
+
+          "seperator":"-",
+
+          "name": "seller_list",
+
+          "next":"seller_info"
+
+        },
+
+        "seller_info": {
+
+          "name": "seller_info",
+
+          "type": "text",
+
+          "text": {
+
+            "type": "text",
+
+            "body": "Seller Name: Name\nSeller Category: Grocery\nPhone: +91-****\nEmail: abcd@gmail.com\nLocation: https://goo.gl/maps/m3D3Bhh5P5PYPgGTA "
+
+          },
+
+          "prompt_type": "message",
+
+          "response_type": "email",
+
+          "next": "close"
+
+        }
+
+      },
+
+      "hi-IN": {
+
+        "category": {
+
+          "name": "category",
+
+          "type": "text",
+
+          "text": {
+
+            "type": "text",
+
+            "body": "एक category का चयन करें "
+
+          },
+
+          "prompt_type": "question",
+
+          "response_type": "number",
+
+          "responses": [
+
+            {
+
+              "value": "1",
+
+              "label": "Grocery",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "2",
+
+              "label": "Food and Beverage",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "3",
+
+              "label": "Home and Decor",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "4",
+
+              "label": "Fashion",
+
+              "next": "seller_list"
+
+            },
+
+            {
+
+              "value": "5",
+
+              "label": "Beauty and Personal Care",
+
+              "next": "seller_list"
+
+            }
+
+          ],
+
+          "next":"seller_list"
+
+        },
+
+        "seller_list": {
+
+          "type": "text",
+
+          "text": {
+
+            "type": "text",
+
+            "body": "एक seller का चयन करें "
+
+          },
+
+          "responses": [
+
+            {
+
+              "value": "1",
+
+              "label": "Seller 1",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "2",
+
+              "label": "Seller 2",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "3",
+
+              "label": "Seller 3",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "4",
+
+              "label": "Seller 4",
+
+              "next": "seller_info"
+
+            },
+
+            {
+
+              "value": "5",
+
+              "label": "Seller 5",
+
+              "next": "seller_info"
+
+            }
+
+          ],
+
+          "prompt_type": "question",
+
+          "response_type": "number",
+
+          "index":"1_seller",
+
+          "fields":["id","name"],
+
+          "responses_show":["name"],
+
+          "filters":["category"],
+
+          "seperator":"-",
+
+          "name": "seller_list",
+
+          "next":"seller_info"
+
+        },
+
+        "seller_info": {
+
+          "name": "seller_info",
+
+          "type": "text",
+
+          "text": {
+
+            "type": "text",
+
+            "body": "नाम : Name\nCategory: Grocery\nफोन : +91-***** \nईमेल : abcd@gmail.com\nलोकैशन : https://goo.gl/maps/m3D3Bhh5P5PYPgGTA "
+
+          },
+
+          "prompt_type": "message",
+
+          "response_type": "email",
+
+          "next": "close"
+
+        }
+
+      }
+
+      
+
+    }
+
+  }
+
+}
+

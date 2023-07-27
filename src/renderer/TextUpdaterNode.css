@@ -1,0 +1,23 @@
+.text-updater-node {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    background: white;
+    overflow-wrap: break-word;
+    max-width: 250px; 
+  }
+  
+  .text-updater-node label {
+    display: block;
+    color: black;
+    font-size: 8px;
+  }
+  
+  .text-updater-node label button {
+    display: block;
+    align-items: center;
+    color: black;
+    font-size: 6px;
+  }
+  
